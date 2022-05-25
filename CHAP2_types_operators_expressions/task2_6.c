@@ -2,7 +2,7 @@
 
 int showBits(int x)
 {
-	for(char i = sizeof(int) * 8; i >= 0; --i)
+	for(char i = sizeof(int) * 8 - 1; i >= 0; --i)
 	{
 		printf("%i", ((x >> i) & 0x1) ? 1 : 0);
 	}
@@ -24,6 +24,7 @@ int main()
 
 int setBits(int x, int p, int n, int y)
 {
+	showBits(3);
 	int rightYPart = y & ((0x1 << n) - 1);
 	showBits(rightYPart);
 
