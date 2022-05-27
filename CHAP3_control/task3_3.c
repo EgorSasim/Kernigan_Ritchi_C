@@ -4,12 +4,11 @@
 void expand(char[], char[]);
 
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	char from[] = "-a-z0-73-5-";
 	char to[100];
 
-	expand(from, to);
+	expand(argv[1], to);
 	printf("%s\n", to);
 	return 0;
 }
